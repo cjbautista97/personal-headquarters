@@ -8,16 +8,29 @@
   }
 
   body {
-    @apply bg-white text-slate-900 antialiased;
+    @apply bg-beige text-dark antialiased font-sans;
   }
 
-  h1,
-  h2,
-  h3,
+  h1 {
+    @apply text-5xl md:text-7xl lg:text-8xl font-bold leading-tight tracking-tight;
+  }
+
+  h2 {
+    @apply text-4xl md:text-6xl font-bold leading-tight tracking-tight;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl font-semibold leading-tight tracking-tight;
+  }
+
   h4,
   h5,
   h6 {
     @apply font-semibold;
+  }
+
+  p {
+    @apply leading-relaxed;
   }
 
   a {
@@ -39,18 +52,30 @@
 
 @layer components {
   .container-custom {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-page mx-auto px-6 sm:px-8 lg:px-12;
   }
 
-  .section-padding {
-    @apply py-12 sm:py-16 md:py-20 lg:py-24;
+  .section-spacing {
+    @apply py-24 sm:py-32 md:py-40 lg:py-48;
   }
 
-  .text-gradient {
-    @apply bg-gradient-to-r from-slate-900 to-slate-700 bg-clip-text text-transparent;
+  .section-spacing-compact {
+    @apply py-16 sm:py-20 md:py-24;
   }
 
   .focus-ring {
-    @apply outline-none ring-2 ring-slate-400 ring-offset-2 rounded;
+    @apply outline-none ring-2 ring-accent ring-offset-2 rounded-md;
+  }
+
+  .text-secondary {
+    @apply text-dark-secondary;
+  }
+
+  .border-subtle {
+    @apply border border-border;
+  }
+
+  .glass-effect {
+    @apply bg-white/40 backdrop-blur-md border border-border;
   }
 }

@@ -33,3 +33,6 @@ dist-ssr
 build/
 .next/
 out/
+
+# tsc artifacts (Vite project — tsc is type-check only via noEmit)
+src/**/*.js
