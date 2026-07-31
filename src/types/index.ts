@@ -44,6 +44,26 @@ export interface Project {
 }
 
 /**
+ * Gallery image type — a single placeholder/photo within a gallery
+ */
+export interface GalleryImage {
+  label: string;
+  caption?: string;
+}
+
+/**
+ * Gallery type — a photo shoot or location shown on /portfolio
+ */
+export interface Gallery {
+  slug: string;
+  title: string;
+  location: string;
+  date?: string;
+  description: string;
+  images: GalleryImage[];
+}
+
+/**
  * Skill category type
  */
 export interface SkillCategory {
