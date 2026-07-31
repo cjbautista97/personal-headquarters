@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { navItems } from '@/data/navigation';
 
 export function Navbar() {
@@ -23,22 +24,22 @@ export function Navbar() {
       }`}
     >
       <div className="container-custom py-5 flex justify-between items-center">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="text-sm font-semibold text-dark tracking-tight hover:text-secondary transition-colors"
         >
           CJ Bautista
-        </a>
+        </Link>
 
         <nav className="hidden md:flex items-center gap-8" aria-label="Primary navigation">
           {filteredNav.map((item) => (
-            <a
+            <Link
               key={item.label}
-              href={item.href}
+              to={item.href.startsWith('#') ? `/${item.href}` : item.href}
               className="text-sm text-secondary hover:text-dark transition-colors duration-200"
             >
               {item.label}
-            </a>
+            </Link>
           ))}
         </nav>
 
